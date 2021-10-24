@@ -1,0 +1,85 @@
+$main-color: #70baa5;
+$text-color: #003325;
+
+.container {
+  max-width: 950px;
+  margin: 100px auto;
+  padding: 50px;
+  background: #00bb85;
+  border-radius: 5px;
+
+  h1 {
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  form {
+    margin-top: 50px;
+
+    input {
+      background: #fff;
+      border-radius: 5px;
+      width: 50%;
+      padding: 5px 10px;
+    }
+
+    button {
+      margin-left: 30px;
+      color: #fff;
+      background: $main-color;
+      padding: 5px 10px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+  }
+
+  .List {
+    margin-top: 50px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:nth-child(n+2) {
+        margin-top: 20px;
+      }
+
+      &--text {
+        color: $text-color;
+      }
+
+      &--btn {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $main-color;
+        border-radius: 50%;
+        background: $main-color;
+
+        &::before, &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 3px;
+          height: 12px;
+          background: #fff;
+        }
+
+        &::before {
+          transform: translate(-50%,-50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%,-50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
